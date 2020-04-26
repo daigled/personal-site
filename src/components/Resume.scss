@@ -1,0 +1,48 @@
+@import '../assets/scss/partials/variables';
+
+#resume {
+    section {
+        margin-bottom: $gutter;
+        &:last-of-type { margin-bottom: 0; }
+
+        .section-header {
+            margin-bottom: 5px;
+        }
+
+        .subsection {
+            margin-bottom: $gutter/2;
+            &:last-of-type { margin-bottom: 0; }
+
+            .subsection-header, .subsection-subheader {
+                display: inline-block;
+            }
+
+            .subsection-header {
+                position: relative;
+                margin-right: $gutter/2;
+                margin-bottom: 5px;
+                font-weight: bold;
+
+                &:after {
+                    content: "";
+                    background: $navy;
+                    width: 1px;
+                    height: 10px;
+                    position: absolute;
+                    top: 50%;
+                    right: -8px;
+                    transform: translateY(-50%) rotate(35deg)
+                }
+            }
+
+            ul {
+                padding-left: 20px;
+                list-style-type: circle;
+                li { margin-bottom: 10px;
+                &:last-of-type { margin-bottom: 0; }}
+            }
+        }
+    }
+
+    margin-bottom: $gutter;
+}// #resume

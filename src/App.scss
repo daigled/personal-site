@@ -36,19 +36,39 @@ footer {
     text-align: right;
     background: lightgreen;
 }
+
+.page-title {
+    font-size: 32px;
+    line-height: 36px;
+    position: relative;
+    margin: 30px 0;
+    color: $navy;
+
+    &:after {
+        content: "";
+        background: $navy;
+        height: 1px;
+        width: 100px;
+        position: absolute;
+        bottom: -5px;
+        left: 4px;
+    }
+}
+
+// TransitionComponent stuff
 .page {
     position: absolute;
 }
 
 .page-enter {
     opacity: 0;
-    transform: translateY(-10%);
+    // transform: translateY(-10%);
 }
 
 .page-enter-active {
     opacity: 1;
     transform: translateY(0);
-    transition: opacity 300ms, transform 300ms;
+    transition: opacity 300ms, transform 600ms;
 }
 
 .page-exit {
