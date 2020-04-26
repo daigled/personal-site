@@ -9,13 +9,15 @@ import Footer from './components/layout/Footer'
 
 import Home from './components/Home'
 import About from './components/About'
-import Resume from './components/Resume'
+import CV from './components/CV'
+import Thanks from './components/Thanks'
 
 
 const routes = [
   { path: '/', name: 'Home', Component: Home },
   { path: '/about', name: 'About', Component: About },
-  { path: '/contact', name: 'Resume', Component: Resume },
+  { path: '/contact', name: 'CV', Component: CV },
+  { path: '/thanks', name: 'Special Thanks', Component: Thanks }
 ]
 
 // Hook

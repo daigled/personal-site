@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 import './Header.scss'
+import logoWhite from '../../assets/img/logo.png'
 
 
 
@@ -17,7 +18,7 @@ export default function Header(props) {
     return (
         <header id="site-header">
             <div className="container">
-                <NavLink to="/"><img className="logo" src="https://placehold.it/50x50"/></NavLink>
+                <NavLink to="/"><img className="logo" src={logoWhite}/></NavLink>
                 <nav id="primary-navigation" className={ isMobile ? menuVisible ? "visible" : "" : "visible" }>
                     <ul>
                     {routes.map(route => (

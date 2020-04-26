@@ -1,11 +1,11 @@
 import React from 'react'
-import './Resume.scss'
+import './CV.scss'
 
-export default function Resume() {
+export default function CV() {
     return (
-        <div id="resume">
-            <h2 className="page-title">Resume</h2>
-            <div id="resume-container">
+        <div id="CV" className="site-section">
+            <h2 className="page-title">CV</h2>
+            <div id="CV-container">
                 <section>
                     <h2 className="section-header">Experience</h2>
                     <div className="subsection">

@@ -1,0 +1,51 @@
+@import '../assets/scss/partials/variables';
+@import '../assets/scss/partials/mixins';
+
+#about {
+    .intro { margin-bottom: $gutter; }
+
+    #skills-filter {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: $gutter/2;
+        margin: $gutter/2 0;
+
+        li {
+            padding: 5px;
+            transition: all 300ms ease;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            
+            &:last-of-type { margin-right: 0; }
+            &.active, &:hover {
+                background: $navy;
+                color: #fff;
+            }
+        }
+    }
+
+    #skills-grid {
+        display: grid;
+        grid-gap: $gutter;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include desktop {
+        #skills-filter {
+            display: block;
+            li { 
+                display: inline-block;
+                &.active, &:hover {
+                    padding: 5px 10px;
+                    background: $navy;
+                    color: #fff;
+                }
+            }
+        }
+
+        #skills-grid {
+            grid-template-columns: repeat(8, 1fr);
+        }
+    }
+}

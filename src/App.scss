@@ -25,7 +25,6 @@ a {
     }
 }
 
-header { background: pink; }
 main { margin-bottom: 30px; }
 footer {
     position: fixed;
@@ -34,7 +33,8 @@ footer {
     right: 0;
     padding: $gutter 0;
     text-align: right;
-    background: lightgreen;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
 }
 
 .page-title {
@@ -51,7 +51,7 @@ footer {
         width: 100px;
         position: absolute;
         bottom: -5px;
-        left: 4px;
+        left: 0;
     }
 }
 

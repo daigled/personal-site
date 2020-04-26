@@ -5,9 +5,11 @@
     position: relative;
 
     .logo {
-        padding: $gutter 0;
+        // padding: $gutter 0;
         display: block;
         margin: auto;
+        width: 50px;
+        max-width: 50px;
     }
 
     .menu-toggle {
@@ -45,6 +47,7 @@
             transform: translateX(-50%);
 
             li {
+                display: block;
                 text-align: center;
                 margin-bottom: $gutter;
                 &:last-of-type { margin-bottom: 0; }
