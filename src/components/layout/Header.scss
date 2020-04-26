@@ -1,5 +1,5 @@
 @import '../../assets/scss/partials/variables';
-
+@import '../../assets/scss/partials/mixins';
 #site-header {
 
     position: relative;
@@ -65,5 +65,54 @@
             right: 33px;           
         }
     }// #primary-navigation
+
+    @include desktop {
+
+        .logo {
+            display: inline-block;
+            padding: 10px 0;
+            vertical-align: middle;
+            margin-right: $gutter;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        #primary-navigation {
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            left: auto;
+            right: 0;
+            bottom: auto;
+            background: transparent;
+            backdrop-filter: none;
+            transform: translateY(-50%);
+
+            ul {
+                position: relative;
+                top: auto;
+                left: auto;
+                transform: translateX(0);
+
+                li {
+                    display: inline-block;
+                    text-align: left;
+                    margin-bottom: 0;
+                    margin-right: $gutter;
+                    &:last-of-type { margin-right: 0; }
+
+                    a {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .menu-toggle { display: none; }
+        }// #primary-navigation
+    }
     
 }// #site-header

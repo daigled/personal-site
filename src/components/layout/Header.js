@@ -24,7 +24,7 @@ export default function Header(props) {
                         <li><NavLink
                             key={route.path}
                             to={route.path}
-                            onClick={e => isMobile ? toggleMenuVisible() : e.preventDefault()}
+                            onClick={e => isMobile ? toggleMenuVisible() : console.log()}
                             activeClassName="active"
                             exact                                           
                         >
