@@ -1,4 +1,5 @@
 @import '../assets/scss/partials/variables';
+@import '../assets/scss/partials/mixins';
 
 #CV {
     section {
@@ -10,17 +11,18 @@
         }
 
         .subsection {
+            position: relative;
             margin-bottom: $gutter/2;
             &:last-of-type { margin-bottom: 0; }
 
             .subsection-header, .subsection-subheader {
-                display: inline-block;
+                display: block;
+                color: $navy;
             }
 
             .subsection-header {
                 position: relative;
                 margin-right: $gutter/2;
-                margin-bottom: 5px;
                 font-weight: bold;
 
                 &:after {
@@ -31,8 +33,38 @@
                     position: absolute;
                     top: 50%;
                     right: -8px;
-                    transform: translateY(-50%) rotate(35deg)
+                    transform: translateY(-50%) rotate(35deg);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 300ms ease;
                 }
+            }
+
+            .subsection-subheader {
+                margin-bottom: 5px;
+            }
+
+            .subsection-details {
+                font-size: 14px;
+                line-height: 18px;
+
+                .location {
+                    position: relative;
+                    margin-right: $gutter/2;
+
+                    &:after {
+                        content: "";
+                        background: #000;
+                        width: 1px;
+                        height: 10px;
+                        position: absolute;
+                        top: 50%;
+                        right: -8px;
+                        transform: translateY(-50%) rotate(35deg);
+                    }
+                }
+
+                margin-bottom: 5px;
             }
 
             ul {
@@ -45,4 +77,31 @@
     }
 
     margin-bottom: $gutter;
+
+    @include desktop {
+        section {
+            .subsection {
+                .subsection-header, .subsection-subheader {
+                    display: inline-block;
+                }
+
+                .subsection-header {
+                    margin-bottom: 5px;
+
+                    &:after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                .subsection-subheader { margin-bottom: 0; }
+
+                .subsection-details {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+        }
+    }
 }// #CV

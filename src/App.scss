@@ -35,6 +35,10 @@ footer {
     text-align: right;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(5px);
+
+    @include desktop {
+        position: absolute;
+    }
 }
 
 .page-title {
@@ -58,6 +62,7 @@ footer {
 // TransitionComponent stuff
 .page {
     position: absolute;
+    margin-bottom: 76px; // account for fixed footer
 }
 
 .page-enter {

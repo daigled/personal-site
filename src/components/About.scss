@@ -29,6 +29,10 @@
         display: grid;
         grid-gap: $gutter;
         grid-template-columns: repeat(4, 1fr);
+
+        i, svg {
+            justify-self: center;
+        }
     }
 
     @include desktop {
@@ -46,6 +50,8 @@
 
         #skills-grid {
             grid-template-columns: repeat(8, 1fr);
+
+            i, svg { justify-self: left; }
         }
     }
 }

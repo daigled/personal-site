@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { CSSTransition } from "react-transition-group";
 import './App.scss';
 
 import Header from './components/layout/Header'
@@ -52,7 +51,7 @@ const useWindowSize = () => {
 function App() {
   const [ isLoaded, setIsLoaded ] = useState(false)
   const size = useWindowSize()
-  const isMobile = size.width <= 797
+  const isMobile = size.width <= 767
 
 
   return (

@@ -1,11 +1,23 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './About.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
     faHtml5,
     faCss3,
+    faSass,
+    faPhp,
+    faJsSquare,
+    faAngular,
+    faReact,
+    faWordpress,
     faJava,
-    faAndroid
+    faJenkins,
+    faAws,
+    faGit,
+    faBitbucket,
+    faDocker,
+    faAndroid,
+    faPython
  } from '@fortawesome/free-brands-svg-icons'
 
  import { CSSTransition } from "react-transition-group";
@@ -42,8 +54,57 @@ export default function About() {
                             classNames="page"
                             unmountOnExit
                         >
+                        <FontAwesomeIcon size="3x" key="php-icon" icon={faPhp} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="master" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="wordpress-icon" icon={faWordpress} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="master" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
                         <FontAwesomeIcon size="3x" key="css-icon" icon={faCss3} />
                     </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="master" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="sass-icon" icon={faSass} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="master" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="js-icon" icon={faJsSquare} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="master" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="angular-icon" icon={faAngular} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="master" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="react-icon" icon={faReact} />
+                    </CSSTransition>
+
                     <CSSTransition
                             in={skillsFilter === "all" || skillsFilter ==="knight" }
                             timeout={300}
@@ -53,12 +114,61 @@ export default function About() {
                         <FontAwesomeIcon size="3x" key="java-icon" icon={faJava} />
                     </CSSTransition>
                     <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="knight" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="jenkins-icon" icon={faJenkins} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="knight" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="git-icon" icon={faGit} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="knight" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="bitbucket-icon" icon={faBitbucket} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="knight" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="aws-icon" icon={faAws} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="knight" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="docker-icon" icon={faDocker} />
+                    </CSSTransition>
+
+                    <CSSTransition
                             in={skillsFilter === "all" || skillsFilter ==="padawan" }
                             timeout={300}
                             classNames="page"
                             unmountOnExit
                         >
                         <FontAwesomeIcon size="3x" key="android-icon" icon={faAndroid} />
+                    </CSSTransition>
+                    <CSSTransition
+                            in={skillsFilter === "all" || skillsFilter ==="padawan" }
+                            timeout={300}
+                            classNames="page"
+                            unmountOnExit
+                        >
+                        <FontAwesomeIcon size="3x" key="python-icon" icon={faPython} />
                     </CSSTransition>
                 </div>
             </section>

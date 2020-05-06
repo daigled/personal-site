@@ -1,0 +1,22 @@
+@import '../assets/scss/partials/variables';
+@import '../assets/scss/partials/mixins';
+
+#thanks {
+    ul {
+        margin: $gutter 0;
+
+        li {
+            margin-bottom: $gutter/2;
+
+            a {
+                font-size: 16px;
+                line-height: 20px;
+                
+                @include desktop{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}// #thanks
